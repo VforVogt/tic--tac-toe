@@ -5,6 +5,7 @@ var ticTacToe = {
         ticTacToe.symbols = ["X", "O"];
         ticTacToe.squares = Array.from(document.querySelectorAll(".square"))
         ticTacToe.turnIndicator = document.querySelector(".turnIndicator");
+        ticTacToe.board = document.querySelector(".board")
         ticTacToe.winningSets = [
             [0,1,2],
             [3,4,5],
@@ -34,6 +35,7 @@ var ticTacToe = {
     newGame: function() {
         this.activePlayer = 0;
         this.gameOver = false;
+        this.board.classList.remove("gameOver")
     },
     
     play: function (el) {
@@ -44,7 +46,7 @@ var ticTacToe = {
             //check if you won
             if (this.checkWin()) {
                 this.turnIndicator.innerText = this.symbols[this.activePlayer] + " Wins!";
-                this.gameOver = true;
+                this.endGame();
             }
             //go to the next player's turn
             else {
@@ -54,7 +56,7 @@ var ticTacToe = {
             //check if there is a draw
             if (this.checkDraw()) {
                 this.turnIndicator.innerText = "Draw Game!"
-                this.gameOver = true;  
+                this.endGame();
             }
         }
     },
@@ -71,6 +73,11 @@ var ticTacToe = {
     checkDraw: function() {
         const currentStatus = Array.from(document.querySelectorAll(".X, .O"))
         return currentStatus.length === 9
+    },
+
+    endGame : function () {
+        this.gameOver = true;
+        this.board.classList.add("gameOver")
     }
 }
 
