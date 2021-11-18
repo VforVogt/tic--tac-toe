@@ -8,6 +8,35 @@ html {
     box-sizing: inherit
 }
 
+#inputContainer {
+    display:flex;
+    flex-direction: column;
+}
+
+#inputcontainer * {
+    margin: 1em;
+    height: 2em;
+}
+
+#inputContainer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.inputAndBtn {
+    display: flex;
+}
+.nameContainers {
+    display: flex;
+    width: 700px;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
 h1 {
     font-size: 45px;
     font-style: bold;
@@ -24,7 +53,8 @@ h3 {
     color: rgb(156, 154, 154);
 }
 body {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;

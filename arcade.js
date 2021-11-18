@@ -1,3 +1,65 @@
+// const player1Input = document.getElementById("player1")
+// const player2Input = document.getElementById("player2");
+// const player1Btn = player1Input.nextElementSibling
+// const player2Btn = player2Input.nextElementSibling
+
+// const state = {
+//     player1: '',
+//     player2: ''
+// }
+
+// console.log(player1Input, player2Input, player1Btn, player2Btn)
+
+// player1Btn.addEventListener("click", () => {
+//     state.player1 = player1Input.value;
+// })
+
+// player2Btn.addEventListener("click", () => {
+//     state.player2 = player2Input.value;
+// })
+
+// document.getElementById("startGameBtn").addEventListener("click", () => {
+
+//     if(!state.player1) {
+//         state.player1 = "Computer";
+//     }
+
+//     if(!state.player2) {
+//         state.player2 = "Computer"
+//     }
+
+//     console.log(state);
+//     document.getElementById("board").style.display = "inherit";
+//     document.getElementById("inputContainer").style.display = "none";
+
+//     const player1 = document.createElement("div");
+//     const player2 = docuemtn.createElement("div");
+
+//     player1.innerText = `Welcome ${state.player1}`
+//     player2.innerText = `Welcome ${state.player2}`
+
+//     document.body.appendChild(player1);
+//     document.body.appendChild(player2);
+// })
+//^^^LET'S ADD THIS LATER^^^///
+
+const playerX = prompt("Player X, you will go first. What is your name?");
+const playerO = prompt("Player O, you will go second. What is your name?");
+
+const playerNameX = playerX;
+const playerNameO = playerO;
+
+function displayPlayerNames() {
+    playerXDisplay = document.getElementById("playerX");
+    playerODisplay = document.getElementById("playerO");
+    
+    console.log(playerXDisplay);
+    console.log(playerODisplay);
+
+    playerXDisplay.innerText = "Player X: " + playerNameX;
+    playerODisplay.innerText = "Player O: " + playerNameO;
+}
+displayPlayerNames();
 
 var ticTacToe = {
     init: function () {
